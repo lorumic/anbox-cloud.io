@@ -26,6 +26,7 @@ LOGIN_URL = "https://login.ubuntu.com"
 ANBOXCLOUD_API_BASE = "https://demo-api.anbox-cloud.io"
 
 session = requests.Session()
+os.environ["SECRET_KEY"] = os.environ["FLASK_SECRET_KEY"]
 app = FlaskBase(
     __name__,
     "anbox-cloud.io",
